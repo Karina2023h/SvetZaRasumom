@@ -1,0 +1,682 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/*  */
+/* Общие стили для секции с фоном */
+.split-section {
+  position: relative;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-image: url('/img/foto.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.split-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Прозрачная темная подложка для улучшения читабельности */
+  z-index: 1;
+}
+
+.split-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 2;
+  /* Контент должен быть поверх затемненной подложки */
+}
+
+.text-side {
+  width: 60%;
+  padding-right: 20px;
+  margin-bottom: 100px;
+}
+
+.text-side h2 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.parag {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parg {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: -25px;
+}
+
+.image-side {
+  width: 50%;
+  text-align: center;
+}
+
+.image-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .split-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-side,
+  .image-side {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text-side {
+    margin-bottom: 20px;
+  }
+
+  .text-side h2 {
+    font-size: 36px;
+  }
+
+  .text-side p {
+    font-size: 16px;
+  }
+}
+
+
+/* Стили для кнопок */
+.button-group {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-telegram {
+  background-color: #3e157cf5;
+  /* Цвет кнопки Telegram */
+  color: #fff;
+}
+
+.btn-scroll {
+  background-color: #b82796;
+  /* Цвет кнопки прокрутки */
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #555;
+  /* Цвет при наведении */
+}
+
+.btn-telegram:hover {
+  background-color: #3b0657;
+  /* Цвет при наведении для Telegram */
+}
+
+.btn-scroll:hover {
+  background-color: #b73172;
+  /* Цвет при наведении для прокрутки */
+}
+
+/* Анимация плавной прокрутки */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*  */
+
+/* Секция роста и трансформации */
+.growth-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-foe {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.text-grow {
+  font-size: 46px;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 64%);
+  line-height: 1.2;
+}
+
+
+.growth-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.growth-item {
+  padding: 30px;
+  border-radius: 12px;
+  background: #3e157cf5;
+  /* Градиент */
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.growth-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.growth-item h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.growth-item p {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .growth-item h3 {
+    font-size: 20px;
+  }
+
+  .growth-item p {
+    font-size: 14px;
+  }
+}
+
+
+/*  */
+
+
+/* Секция марафона */
+.marathon-section {
+  padding: 80px 20px;
+  background-image: url('/img/foto4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.marathon-section::before {
+  content: "";
+  /* Создаем псевдоэлемент */
+  position: absolute;
+  /* Абсолютное позиционирование */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0 0 0 / 47%);
+  /* Полупрозрачный черный фон для затемнения */
+  z-index: 1;
+  /* Устанавливаем выше изображения */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* Чтобы содержимое отображалось выше псевдоэлемента */
+  z-index: 2;
+  /* Устанавливаем выше псевдоэлемента */
+}
+
+.text-mara {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 64%);
+  line-height: 1.2;
+}
+
+.intro-text {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.marathon-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.marathon-item {
+  background: rgb(160 158 158 / 26%);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 38%);
+}
+
+.marathon-item h3 {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.marathon-item p {
+  font-size: 17px;
+  color: #ebeaea;
+  line-height: 0.8;
+  font-weight: 600;
+}
+
+
+.block-text {
+  text-align: center;
+  font-size: 18px;
+  background: #22212180;
+  width: 37%;
+  border-radius: 5px;
+  height: 26px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
+/* Кнопка призыва к действию */
+.cta-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #3e157cf5;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 98%);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #3e157cf5;
+  transform: translateY(-5px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .marathon-item h3,
+  .feature h4 {
+    font-size: 20px;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+  }
+}
+
+/*  */
+.program-section {
+  /* background: linear-gradient(135deg, #c1bfbf, #4e0b7d, #eeecf0); */
+  background-image: url('/img/foto1.jpg');
+  padding: 60px 40px;
+  text-align: left;
+  color: #fff;
+  position: relative;
+  min-height: 350px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.program-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 67%);
+
+}
+
+.program-section h1 {
+  max-width: 70%;
+  font-size: 55px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.program-section h1 span {
+  margin-top: 10px;
+  font-size: 60px;
+  display: block;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  /* Градиентный текст */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: none;
+}
+
+.features {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  background-color: #fff;
+  color: #333;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: left;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features ul li {
+  font-size: 20px;
+  /* Увеличиваем размер текста */
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 40px;
+  /* Увеличиваем отступ для лучшего восприятия */
+  font-weight: bold;
+  /* Делаем текст жирным */
+  color: #333;
+  line-height: 1.2;
+  /* Более темный цвет текста для контраста */
+}
+
+.features ul li::before {
+  content: '✔';
+  /* Используем чек-лист в виде галочки */
+  color: #6a0dad;
+  /* Тёмно-фиолетовая галочка */
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+  /* Увеличиваем размер галочки */
+  top: -3px;
+  /* Небольшое смещение для лучшего размещения */
+}
+
+/*  */
+
+.course-goals {
+  padding: 80px 20px;
+  background-color: #eeeeee;
+  /* Легкий градиент для фона */
+  text-align: center;
+
+}
+
+.content-container {
+  max-width: 900px;
+  padding: 10px 60px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-image: url(/img/foto.jpg);
+  background-size: cover;
+}
+
+.goals-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 64%);
+  line-height: 1.2;
+}
+
+.goals-list {
+  background-color: white;
+  /* Белый фон для блока с текстом */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+  /* Цвет текста */
+}
+
+.goals-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.goals-list li {
+  font-size: 20px;
+  margin: 15px 0;
+  padding: 10px 15px;
+  font-weight: 600;
+  /* Добавление внутреннего отступа */
+  border-left: 5px solid #2e0461;
+  /* Добавление левой границы */
+  background-color: rgba(243, 240, 240, 0.605);
+  /* Полупрозрачный фон для улучшения читаемости */
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Плавные эффекты при наведении */
+}
+
+.goals-list li:hover {
+  transform: translateY(-3px);
+  /* Подъем элемента при наведении */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Добавление тени при наведении */
+}
+
+@media (max-width: 768px) {
+  .goals-title {
+    font-size: 28px;
+  }
+
+  .goals-list li {
+    font-size: 16px;
+  }
+}
+
+.marathon-benefits {
+  /* background: linear-gradient(135deg, #a9a6a9, #4a0577); */
+
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  /* Белый фон для контейнера */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #323232;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.registration-info {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  /* Отступ между блоками */
+}
+
+.benefit-block {
+  flex: 1 1 calc(25% - 20px);
+  /* Ширина блоков по 33% с учетом отступов */
+  background-color: #dfdbdb;
+  /* Светлый фон для блоков */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-block h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.benefit-block p {
+  color: #444;
+  /* Темный текст */
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+  .benefit-block {
+    flex: 1 1 calc(50% - 20px);
+    /* На мобильных устройствах 2 блока в ряд */
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-block {
+    flex: 1 1 100%;
+    /* На очень маленьких экранах 1 блок в ряд */
+  }
+}
+
+
+.site-footer {
+  background-color: #31065d;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .footer-section {
+    flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    flex: 1 1 100%;
+  }
+}
