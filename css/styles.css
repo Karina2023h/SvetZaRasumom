@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 80vh;
-  background-image: url('/img/foto.jpg');
+  background-image: url('../img/foto.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -251,7 +251,7 @@ html {
 /* Секция марафона */
 .marathon-section {
   padding: 80px 20px;
-  background-image: url('/img/foto4.jpg');
+  background-image: url('../img/foto4.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -398,7 +398,7 @@ html {
 /*  */
 .program-section {
   /* background: linear-gradient(135deg, #c1bfbf, #4e0b7d, #eeecf0); */
-  background-image: url('/img/foto1.jpg');
+  background-image: url('../img/foto1.jpg');
   padding: 60px 40px;
   text-align: left;
   color: #fff;
@@ -508,7 +508,7 @@ html {
   padding: 10px 60px;
   border-radius: 10px;
   margin: 0 auto;
-  background-image: url(/img/foto.jpg);
+  background-image: url('../img/foto.jpg');
   background-size: cover;
 }
 
